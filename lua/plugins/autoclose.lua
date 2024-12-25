@@ -1,12 +1,14 @@
 return {
    {
       "m4xshen/autoclose.nvim",
+      name = "autoclose-config",
       opts = {
          options = {
             disabled_filetypes = { "text", "markdown" },
-            disable_when_touch = true,
          }
       },
+			config = function()
+				require("autoclose").setup()
+			end
    },
-   { "windwp/nvim-ts-autotag" },
 }

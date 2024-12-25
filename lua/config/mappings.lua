@@ -1,15 +1,11 @@
 -- [[Keymap Settings]]
 -- vim.keymap.set({mode}, {lhs}, {rhs}, {opts})
 
--- Leader key
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
 -- map leader+w to save current file in normal mode
 vim.keymap.set('n', '<Leader>w', ':write<CR>', { noremap = true, silent = true })
 
 -- exiting insert mode
-vim.keymap.set('i', 'jj', '<Esc>') 
+vim.keymap.set('i', 'jj', '<Esc>')
 
 -- exiting terminal
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
