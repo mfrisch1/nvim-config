@@ -33,7 +33,9 @@ return {
 							globals = {"vim"},
 						},
 						workspace = {
-							library = {vim.env.VIMRUNTIME},
+							library = {
+								vim.env.VIMRUNTIME
+							},
 							checkThirdParty = false,
 						},
 						telemery = {
@@ -42,6 +44,11 @@ return {
 					}
 				}
 			})
+			vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
+			vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, {})
+			vim.keymap.set('n', ']d', vim.diagnostic.goto_next, {})
+			-- Open Error Quick Window
+			vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
 		end
 	}
 }

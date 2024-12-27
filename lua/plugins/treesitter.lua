@@ -7,6 +7,9 @@ return {
 				ensure_installed = {
 					"lua",
 					"c",
+				},
+				highlight = {
+					enabled = true
 				}
 			})
 		end
