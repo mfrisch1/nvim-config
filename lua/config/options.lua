@@ -51,4 +51,4 @@ end)
 vim.opt.undofile = true
 
 -- Write swap file to disk for recovery. Default 4000 ms
-vim.opt.updatetime = 1000
+vim.opt.updatetime = 250

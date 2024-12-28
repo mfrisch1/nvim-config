@@ -25,6 +25,7 @@ return {
 		name = "nvim-lspconfig",
 		config = function()
 			local lspconfig = require("lspconfig")
+			lspconfig.clangd.setup({})
 			lspconfig.lua_ls.setup({
 				settings = {
 					Lua = {
@@ -39,7 +40,7 @@ return {
 							checkThirdParty = false,
 						},
 						telemery = {
-							eneale = false,
+							enable = false,
 						},
 					}
 				}
@@ -47,7 +48,7 @@ return {
 			vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 			vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, {})
 			vim.keymap.set('n', ']d', vim.diagnostic.goto_next, {})
-			-- Open Error Quick Window
+			-- Open Error Quick Fix Window
 			vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
 		end
 	}
