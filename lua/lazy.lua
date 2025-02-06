@@ -19,7 +19,7 @@ vim.opt.rtp:prepend(lazypath)
 -- loading lazy.nvim so that mappings are correct.
 
 -- Leader key
-vim.g.mapleader = ' '
+vim.g.mapleader = ' ' -- <Leader> will become space.
 vim.g.maplocalleader = ' '
 
 

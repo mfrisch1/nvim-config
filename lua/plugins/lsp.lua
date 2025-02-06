@@ -14,7 +14,10 @@ return {
 				automatic_installation = true,
 				ensure_installed = {
 					"lua_ls",
-					"clangd"
+					"clangd",
+					"gopls",
+					"dockerls",
+					"docker_compose_language_service",
 				}
 			}
 			)
@@ -24,9 +27,24 @@ return {
 		"neovim/nvim-lspconfig",
 		name = "nvim-lspconfig",
 		config = function()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
-			lspconfig.clangd.setup({})
+
+			lspconfig.docker_compose_language_service.setup({
+				capabilities = capabilities
+			})
+
+			lspconfig.dockerls.setup({
+				capabilities = capabilities
+			})
+			lspconfig.gopls.setup({
+				capabilities = capabilities
+			})
+			lspconfig.clangd.setup({
+				capabilities = capabilities
+			})
 			lspconfig.lua_ls.setup({
+				capabilities = capabilities,
 				settings = {
 					Lua = {
 						diagnostics = {
@@ -45,6 +63,7 @@ return {
 					}
 				}
 			})
+
 			vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 			vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, {})
 			vim.keymap.set('n', ']d', vim.diagnostic.goto_next, {})
