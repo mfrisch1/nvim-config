@@ -15,7 +15,7 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"clangd",
-					"gopls",
+					"harper_ls",
 					"dockerls",
 					"docker_compose_language_service",
 				}
