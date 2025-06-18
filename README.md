@@ -45,10 +45,10 @@ if plugins are not install automatically run:
 🔧 Recommended Tools
 Install these for best experience:
 
-ripgrep
-fd
-Node.js (for some LSPs and formatters)
-Mason (handles LSP/DAP/formatter installation)
+ripgrep  
+fd  
+Node.js (for some LSPs and formatters)  
+Mason (handles LSP/DAP/formatter installation)  
 
 ---
 
