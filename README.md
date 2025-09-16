@@ -31,7 +31,7 @@ rm -rf ~/.cache/nvim
 
 ### 2. Clone this config 
 ```bash
-git clone https://github.com/<your-username>/nvim-config.git ~/.config/nvim
+git clone https://github.com/mfrisch1/nvim-config.git ~/.config/nvim
 ```
 
 ### 3. Launch Neovim 
